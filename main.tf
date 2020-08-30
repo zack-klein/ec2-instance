@@ -64,7 +64,7 @@ resource "aws_autoscaling_group" "instance" {
   min_size             = var.min_size
   max_size             = var.max_size
   vpc_zone_identifier  = var.subnets
-  target_group_arns    = var.target_group_arns
+  load_balancers       = var.load_balancers
   lifecycle {
     create_before_destroy = true
   }
