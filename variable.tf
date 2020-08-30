@@ -66,6 +66,12 @@ variable "instance_profile" {
   description = "Name of an instance profile to attach."
 }
 
+variable "target_group_arns" {
+  type        = list
+  default     = null
+  desctiption = "ARN's of target groups to register with the auto scaling group."
+}
+
 # Allow access from work station IP
 
 data "http" "workstation-external-ip" {
