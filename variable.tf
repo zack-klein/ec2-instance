@@ -69,7 +69,7 @@ variable "instance_profile" {
 variable "load_balancers" {
   type        = list
   default     = null
-  desctiption = "ARN's of target groups to register with the auto scaling group."
+  description = "ID's of load balancers to associate with this group."
 }
 
 # Allow access from work station IP
