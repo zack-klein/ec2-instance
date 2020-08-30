@@ -66,10 +66,10 @@ variable "instance_profile" {
   description = "Name of an instance profile to attach."
 }
 
-variable "load_balancers" {
+variable "target_group_arns" {
   type        = list
   default     = null
-  description = "ID's of load balancers to associate with this group."
+  description = "ARN's of target groups to attach to instances (you'll want to use this if you're using a load balancer)."
 }
 
 # Allow access from work station IP
