@@ -50,7 +50,7 @@ resource "aws_launch_configuration" "instance" {
   instance_type        = var.instance_type
   iam_instance_profile = var.instance_profile
   key_name             = aws_key_pair.key.key_name
-  user_data            = file(var.user_data_path)
+  user_data            = var.user_data
   security_groups      = [aws_security_group.security_group.id]
 
   lifecycle {
