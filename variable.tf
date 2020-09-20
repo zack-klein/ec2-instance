@@ -34,9 +34,8 @@ variable "max_size" {
   default     = 1
 }
 
-variable "user_data_path" {
-  type        = string
-  description = "Path to a user data bash script."
+variable "user_data" {
+  description = "User data to bootstrap the instance."
 }
 
 variable "public" {
